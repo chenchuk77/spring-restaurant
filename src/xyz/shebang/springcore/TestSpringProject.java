@@ -9,9 +9,9 @@ public class TestSpringProject {
 		ApplicationContext context = 
 				new ClassPathXmlApplicationContext("SpringConfig.xml");
 		
-		//Restaurant restaurantObj = (Restaurant) context.getBean("restaurant");
+		Restaurant restaurantObj = (Restaurant) context.getBean("restaurant");
 		
-//		restaurantObj.greetCustomer();
-		//restaurantObj.prepareHotDrink();
+		restaurantObj.greetCustomer();
+		restaurantObj.prepareHotDrink();
 	} 
 }

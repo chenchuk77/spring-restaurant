@@ -1,8 +1,5 @@
 package xyz.shebang.springcore;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Tea implements IHotDrink {
 
 	@Override
