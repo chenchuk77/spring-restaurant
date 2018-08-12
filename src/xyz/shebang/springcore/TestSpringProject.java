@@ -11,7 +11,8 @@ public class TestSpringProject {
 		
 		Restaurant restaurantObj = (Restaurant) context.getBean("restaurantBean");
 		
-		restaurantObj.greetCustomer();
-		restaurantObj.prepareHotDrink();
+//		restaurantObj.greetCustomer();
+//		restaurantObj.prepareHotDrink();
+		restaurantObj.displayWaitersNames();
 	} 
 }

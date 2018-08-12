@@ -1,21 +1,17 @@
 package xyz.shebang.springcore;
 
-public class Restaurant implements IHotDrink{
-	
-	String welcomeNote;
-	IHotDrink hotDrink;
-	
-	public void setHotDrink(IHotDrink hotDrink) {
-		this.hotDrink = hotDrink;
-	}
+import java.util.List;
 
-	public void greetCustomer() {
-		System.out.println(welcomeNote);
+public class Restaurant {
+	
+	List<String> waitersList;
+	
+	public void setWaitersList(List<String> waitersList) {
+		this.waitersList = waitersList;
 	}
 	
-	public void prepareHotDrink() {
-		hotDrink.prepareHotDrink();
-		
+	public void displayWaitersNames() {
+		System.out.println("Waiters : " + waitersList);
 	}
 	
 }
