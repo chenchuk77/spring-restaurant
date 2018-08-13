@@ -7,5 +7,4 @@
 	<bean id="restaurantBean" class="xyz.shebang.springcore.Restaurant" scope="singleton" >
     </bean>
     
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 </beans>

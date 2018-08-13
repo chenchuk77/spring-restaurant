@@ -5,7 +5,10 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Restaurant {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Restaurant implements InitializingBean, DisposableBean{
 	
 	private String message;
 	
@@ -17,14 +20,16 @@ public class Restaurant {
 		System.out.println(message);
 	}
 
-	@PostConstruct
-	public void init() {
-		System.out.println("init() called.");
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("running hook: afterPropertiesSet");
+		
 	}
-	
-	@PreDestroy
-	public void destroy() {
-		System.out.println("destroy() called.");
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("running hook: destroy");
+		
 	}
 	
 	
