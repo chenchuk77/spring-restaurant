@@ -4,20 +4,8 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="restaurantBean" class="xyz.shebang.springcore.Restaurant">
-		<property name="WaitersList">
-			<list>
-				<value>Mr. aaa</value>
-				<value>Mr. bbb</value>
-				<value>Mr. ccc</value>
-				<value>Mr. ddd</value>
-			
-			</list>
-		
-		</property>
-	</bean>
-
-	<bean id="teaBean" class="xyz.shebang.springcore.Tea">
- 	</bean>
-
+	<bean id="restaurantBean" class="xyz.shebang.springcore.Restaurant" scope="singleton" >
+    </bean>
+    
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 </beans>
